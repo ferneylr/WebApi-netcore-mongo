@@ -19,7 +19,7 @@ namespace ApiMongo.Models
         public string SchemaVersion { get; set; }
 
         [BsonElement("document_version")]
-        public string DocumentVersion { get; set; }
+        public int DocumentVersion { get; set; }
 
         [BsonRepresentation(MongoDB.Bson.BsonType.DateTime)]
         [BsonElement("fecha_creacion")]

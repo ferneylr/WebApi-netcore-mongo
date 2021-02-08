@@ -16,9 +16,9 @@ namespace ApiMongo.Models
         [BsonElement("fecha_expedicion")]
         public DateTime FechaExpedicion { get; set; }
 
-        [BsonRepresentation(MongoDB.Bson.BsonType.DateTime)]
+        
         [BsonElement("lugar_expedicion")]
-        public DateTime LugarExpedicion { get; set; }
+        public string LugarExpedicion { get; set; }
 
         [BsonElement("tipo")]
         public string Tipo { get; set; }
