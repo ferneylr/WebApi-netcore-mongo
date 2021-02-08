@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static ApiMongo.Models.Persona;
 
 namespace ApiMongo.Repositories
 {
@@ -10,7 +11,7 @@ namespace ApiMongo.Repositories
     {
         Task InsertPersona(Persona persona);
 
-        Task UpdatePersona(Persona persona);
+        Task UpdatePersona(EditPersona editPersona);
 
         Task DeletePersona(string id);
 

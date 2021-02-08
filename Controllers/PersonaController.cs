@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static ApiMongo.Models.Persona;
 
 namespace ApiMongo.Controllers
 {
@@ -44,13 +45,13 @@ namespace ApiMongo.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersona([FromBody] Persona persona)
+        public async Task<IActionResult> UpdatePersona([FromBody] EditPersona editPersona)
         {
-            if (persona == null)
+            if (editPersona == null)
                 return BadRequest();
                      
            
-            await db.UpdatePersona(persona);
+            await db.UpdatePersona(editPersona);
 
             return Created("Created", true);
         }
