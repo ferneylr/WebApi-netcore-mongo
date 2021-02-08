@@ -45,13 +45,13 @@ namespace ApiMongo.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersona([FromBody] EditPersona editPersona)
+        public async Task<IActionResult> UpdatePersona([FromBody] Persona persona)
         {
-            if (editPersona == null)
+            if (persona == null)
                 return BadRequest();
                      
            
-            await db.UpdatePersona(editPersona);
+            await db.UpdatePersona(persona);
 
             return Created("Created", true);
         }

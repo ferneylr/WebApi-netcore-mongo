@@ -11,7 +11,7 @@ namespace ApiMongo.Repositories
     {
         Task InsertPersona(Persona persona);
 
-        Task UpdatePersona(EditPersona editPersona);
+        Task UpdatePersona(Persona persona);
 
         Task DeletePersona(string id);
 
